@@ -3,7 +3,11 @@ using System.Linq;
 
 class Medias {
 
-  public static void CalcMedia (int QtdNotas) {
+  public static void CalcMedia () {
+    Console.WriteLine("Qual a quantidade de notas a ser calculada?");
+    
+    int QtdNotas = int.Parse(Console.ReadLine());
+
     float media;
     float[] notas = new float[QtdNotas];
 
@@ -21,8 +25,6 @@ class Medias {
   }
 
   public static void Main (string[] args) {
-    Console.WriteLine("Qual a quantidade de notas a ser calculada?");
-    int QtdNotas = int.Parse(Console.ReadLine());
-    CalcMedia(QtdNotas);
+    CalcMedia();
   }
 }
